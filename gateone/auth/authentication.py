@@ -235,12 +235,12 @@ class NullAuthHandler(BaseAuthHandler):
             self.user_logout(user['upn'])
             return
         # This takes care of the user's settings dir and their session info
-        self.user_login(user)
-        next_url = self.get_argument("next", None)
-        if next_url:
-            self.redirect(next_url)
-        else:
-            self.redirect(self.settings['url_prefix'])
+        # self.user_login(user)
+        # next_url = self.get_argument("next", None)
+        # if next_url:
+        #     self.redirect(next_url)
+        # else:
+        #     self.redirect(self.settings['url_prefix'])
 
     def user_login(self, user):
         """
